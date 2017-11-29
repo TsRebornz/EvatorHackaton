@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let categoryCell              = "categoryCell"
+    static let goodsCell                 = "goodsCell"
+}

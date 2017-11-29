@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EvatorHackaton/Category/CategoryCollectionView.swift"
+            timestampString = "533556162.55042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EvatorHackaton.CategoryCollectionView.numberOfSections (in : __ObjC.UICollectionView) -&gt; Swift.Int"
+                  moduleName = "EvatorHackaton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a.makarenkov/Programming/Evator/EvatorHackaton/EvatorHackaton/Category/CategoryCollectionView.swift"
+                  timestampString = "533556172.991459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EvatorHackaton.CategoryCollectionView.numberOfSections (in : __ObjC.UICollectionView) -&gt; Swift.Int"
+                  moduleName = "EvatorHackaton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a.makarenkov/Programming/Evator/EvatorHackaton/EvatorHackaton/Category/CategoryCollectionView.swift"
+                  timestampString = "533556172.992799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

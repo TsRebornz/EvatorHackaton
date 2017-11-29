@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CategoryCollectionCellModel {
+struct CategoryTableCellModel {
     let categoryImageUrl: String
     let categoryName: String
 }
