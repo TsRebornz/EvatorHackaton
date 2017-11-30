@@ -1,65 +1,53 @@
 //
-//  CategoryTableViewController.swift
+//  StoresTableViewController.swift
 //  EvatorHackaton
 //
-//  Created by user name on 29/11/2017.
+//  Created by user name on 30/11/2017.
 //  Copyright © 2017 TM. All rights reserved.
 //
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
+final class StoresTableViewController: UITableViewController {
 
     private var dataProvider:DataProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataProvider = CategoryTableDataProvider()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.dataProvider = StoresDataProvider()                
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        
-//    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let dataCount = self.dataProvider?.getData()?.count {
-//            return dataCount
-//        }
-        return 3
-    }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+        return 2
+    }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.categoryCell, for: indexPath)
-        let model = self.dataProvider?.getData()?[indexPath.row] as? CategoryTableCellModel
-        let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.image = UIImage(named: (model?.categoryImageUrl)!)
-        let label = cell.viewWithTag(2) as! UILabel
-        label.text = model?.categoryName
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.storeCell, for: indexPath)
+        if let model = self.dataProvider?.getData()?[indexPath.row] as? StoresModel {
+            let distanceLabel = cell.viewWithTag(1) as! UILabel
+            distanceLabel.text = model.distance
+            let storeNameLabel = cell.viewWithTag(2) as! UILabel
+            storeNameLabel.text = model.storeName
+            let addressLabel = cell.viewWithTag(3) as! UILabel
+            addressLabel.text = model.address
+            let workTimeLabel = cell.viewWithTag(4) as! UILabel
+            workTimeLabel.text = model.workTime
+        }
         return cell
     }
     
-    //MARK: Actions
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    //MARK:
 
     /*
     // Override to support conditional editing of the table view.

@@ -11,4 +11,6 @@ import Foundation
 struct Constants {
     static let categoryCell              = "categoryCell"
     static let goodsCell                 = "goodsCell"
+    static let storeCell                 = "storeCell"
+    static let defaultColor              = "00FFCB"
 }
