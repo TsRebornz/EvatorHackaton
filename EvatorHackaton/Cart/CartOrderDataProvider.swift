@@ -35,6 +35,8 @@ final class CartOrderDataProvider: NSObject {
     func saveAndSendOrderToEvator() {
         let apiClient = ApiClient()
         let parameters: NSDictionary = currentOrderInCart.toDictionary()
+        
+        
         apiClient.reaquestExamaple(parameters: parameters)
         self.appDelegate.addOrder(byModel: currentOrderInCart)
     }

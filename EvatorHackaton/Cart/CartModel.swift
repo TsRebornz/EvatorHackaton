@@ -14,4 +14,24 @@ struct CartModel {
     let itemName: String
     let price: Int
     var itemCount: Int
+    
+    /*
+     
+     {
+         "name": "Батон",
+         "quantity": 1,
+         "price": 25.0,
+         "uuid": "42c151a8-b22b-4cd5-b103-21bdb882e489"
+     }
+ 
+    */
+    
+    func toDictionary() -> NSDictionary {
+        return [
+            "name": itemName,
+            "quantity": itemCount,
+            "price": price,
+            "uuid": Constants.uuid
+        ]
+    }
 }

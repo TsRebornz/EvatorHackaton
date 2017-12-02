@@ -15,10 +15,18 @@ struct OrderModel {
     let goods: [CartModel]
     
     func toDictionary() -> NSDictionary {
-        return [
+        var dicitionary = [
             "price": self.price,
             "itemsCount": self.itemCount,
             "items": []                        
-        ]
+        ] as [String : Any]
+        
+        var cartDictinaryArr: [[String:Any]] = []
+        for cartModel in self.goods {
+            let cartDictionary = cartModel.toDictionary()
+            cartDictinaryArr.append(cartDictionary as! [String : Any])
+        }
+        dicitionary["items"] = cartDictinaryArr
+        return dicitionary as NSDictionary
     }
 }

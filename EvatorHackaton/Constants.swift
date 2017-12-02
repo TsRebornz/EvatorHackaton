@@ -16,4 +16,5 @@ struct Constants {
     static let defaultColor              = "00FFCB"
     static let makeOrderButtonText       = "Оформить заказ на"
     static let rubleChar                 = "\u{20BD}"
+    static let uuid                      = "42c151a8-b22b-4cd5-b103-21bdb882e489"
 }
