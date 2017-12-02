@@ -11,3 +11,7 @@ import Foundation
 protocol DataProvider {
     func getData() -> [AnyObject]?
 }
+
+protocol DataForCell {
+    func setCellModel(model:AnyObject)
+}

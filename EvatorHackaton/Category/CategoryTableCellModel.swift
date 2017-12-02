@@ -9,6 +9,7 @@
 import Foundation
 
 struct CategoryTableCellModel {
+    let id: Int
     let categoryImageUrl: String
     let categoryName: String
 }

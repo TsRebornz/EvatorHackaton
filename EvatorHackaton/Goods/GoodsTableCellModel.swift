@@ -9,6 +9,9 @@
 import Foundation
 
 struct GoodsTableCellModel {
+    let id: Int
+    let categoryId: Int
     let goodsImageUrl: String
     let goodsName: String
+    let price: Int
 }

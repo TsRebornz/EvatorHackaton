@@ -11,6 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private var cartModels: [CartModel] = []
+    
     var window: UIWindow?
 
 
@@ -40,7 +42,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func addModelToCartModel(model: CartModel) {
+        self.cartModels.append(model)
+    }
+    
+    func updateCartModel(by id: Int, and itemCount: Int) {
+        for (index, model) in self.cartModels.enumerated() {
+            if (model.id == id) {
+                var t_model = model
+                self.cartModels[index].itemCount = itemCount                
+            }
+        }
+    }
+    
+    func removeLastCart() {
+        self.cartModels.removeLast()
+    }
+    
+    func removeCart(byId id: Int) {
+        for (index, model) in self.cartModels.enumerated() {
+            if (model.id == id) {
+                self.cartModels.remove(at: index)
+            }
+        }
+    }
 }
 

@@ -11,9 +11,11 @@ import UIKit
 class GoodsTableViewController: UITableViewController {
 
     private var dataProvider:DataProvider?
+    var categoryId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: Constants.goodsCell)
         self.dataProvider = GoodsTableDataProvider()        
     }
 
@@ -35,14 +37,11 @@ class GoodsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.goodsCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.goodsCell, for: indexPath) as? GoodsTableViewCell
         if let model = self.dataProvider?.getData()?[indexPath.row] as? GoodsTableCellModel {
-            let imageView = cell.viewWithTag(1) as! UIImageView
-            imageView.image = UIImage(named: model.goodsImageUrl)
-            let label = cell.viewWithTag(2) as! UILabel
-            label.text = model.goodsName
+            cell?.setCellModel(model:model as AnyObject)
         }
-        return cell
+        return cell!
     }
     
     //MARK: Actions
@@ -51,6 +50,13 @@ class GoodsTableViewController: UITableViewController {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
+    @objc func plusTapped(_ sender: UITableViewCell) {
+        sender.viewWithTag(6)
+    }
+    
+    @objc func minusTapped(_ sender: UITableViewCell) {
+        sender.viewWithTag(6)
+    }
     
     //MARK:
     
