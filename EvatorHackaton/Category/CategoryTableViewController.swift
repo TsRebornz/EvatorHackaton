@@ -15,11 +15,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataProvider = CategoryTableDataProvider()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.dataProvider?.getData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +29,11 @@ class CategoryTableViewController: UITableViewController {
 //    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let dataCount = self.dataProvider?.getData()?.count {
-//            return dataCount
-//        }
-        return 3
+        if let _cellModels = self.dataProvider?.cellModels {
+            return _cellModels.count
+        }
+        return 0
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

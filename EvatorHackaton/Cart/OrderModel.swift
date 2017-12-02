@@ -10,6 +10,15 @@ import Foundation
 
 struct OrderModel {
     let id: Int
-    let itemCount: String
-    let price: String    
+    let itemCount: Int
+    let price: Int
+    let goods: [CartModel]
+    
+    func toDictionary() -> NSDictionary {
+        return [
+            "price": self.price,
+            "itemsCount": self.itemCount,
+            "items": []                        
+        ]
+    }
 }

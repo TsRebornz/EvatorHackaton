@@ -7,50 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E055F2B1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E055F2A1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift */; };
+		5E055F2E1FD2D759004BF1E4 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E055F2D1FD2D759004BF1E4 /* CartModel.swift */; };
+		5E055F301FD2D7D4004BF1E4 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E055F2F1FD2D7D4004BF1E4 /* OrderModel.swift */; };
+		5EC8B9741FD3052700E2B497 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9731FD3052700E2B497 /* CartTableViewController.swift */; };
+		5EC8B9761FD31A0100E2B497 /* CartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9751FD31A0100E2B497 /* CartDataProvider.swift */; };
+		5EC8B9781FD32B8800E2B497 /* GoodsTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9771FD32B8800E2B497 /* GoodsTableCellModel.swift */; };
+		5EC8B97A1FD32C3900E2B497 /* GoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9791FD32C3900E2B497 /* GoodsTableViewController.swift */; };
+		5EC8B97C1FD32C9E00E2B497 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B97B1FD32C9E00E2B497 /* CartTableViewCell.swift */; };
+		5EC8B97F1FD33B4A00E2B497 /* OrderDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */; };
+		5EC8B9811FD33BA100E2B497 /* CartOrderDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9801FD33BA100E2B497 /* CartOrderDataProvider.swift */; };
 		E93363F21FCD69E600FBFCB6 /* CategoryTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363EF1FCD69E600FBFCB6 /* CategoryTableCellModel.swift */; };
 		E93363F31FCD69E600FBFCB6 /* CategoryTableDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363F01FCD69E600FBFCB6 /* CategoryTableDataProvider.swift */; };
 		E93363F61FCEC9A700FBFCB6 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363F51FCEC9A700FBFCB6 /* CategoryTableViewController.swift */; };
-		E93363F91FCED76900FBFCB6 /* GoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363F81FCED76900FBFCB6 /* GoodsTableViewController.swift */; };
 		E93363FB1FCED79300FBFCB6 /* GoodsTableDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363FA1FCED79300FBFCB6 /* GoodsTableDataProvider.swift */; };
-		E93363FD1FCED7A900FBFCB6 /* GoodsTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363FC1FCED7A900FBFCB6 /* GoodsTableCellModel.swift */; };
 		E93363FF1FCED80F00FBFCB6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363FE1FCED80F00FBFCB6 /* Protocols.swift */; };
 		E93364021FD00A9400FBFCB6 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93364011FD00A9400FBFCB6 /* StoresTableViewController.swift */; };
 		E93364041FD00AAE00FBFCB6 /* StoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93364031FD00AAE00FBFCB6 /* StoresModel.swift */; };
 		E93364061FD00B5900FBFCB6 /* StoresMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93364051FD00B5900FBFCB6 /* StoresMapViewController.swift */; };
 		E93364081FD00BA800FBFCB6 /* StoresDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93364071FD00BA800FBFCB6 /* StoresDataProvider.swift */; };
 		E933640B1FD011DE00FBFCB6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933640A1FD011DE00FBFCB6 /* LocationManager.swift */; };
-		E933640F1FD03EC300FBFCB6 /* EvatorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933640E1FD03EC300FBFCB6 /* EvatorApi.swift */; };
+		E933640F1FD03EC300FBFCB6 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933640E1FD03EC300FBFCB6 /* ApiClient.swift */; };
 		E9F23DCA1FCD56D900B6E25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F23DC91FCD56D900B6E25F /* AppDelegate.swift */; };
-		E9F23DCC1FCD56D900B6E25F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F23DCB1FCD56D900B6E25F /* ViewController.swift */; };
+		E9F23DCC1FCD56D900B6E25F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F23DCB1FCD56D900B6E25F /* TestViewController.swift */; };
 		E9F23DCF1FCD56D900B6E25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F23DCD1FCD56D900B6E25F /* Main.storyboard */; };
 		E9F23DD11FCD56D900B6E25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F23DD01FCD56D900B6E25F /* Assets.xcassets */; };
 		E9F23DD41FCD56D900B6E25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F23DD21FCD56D900B6E25F /* LaunchScreen.storyboard */; };
-		E9F23DE11FCD5E5000B6E25F /* Order in Resources */ = {isa = PBXBuildFile; fileRef = E9F23DDD1FCD5E5000B6E25F /* Order */; };
 		E9F23DE71FCD608500B6E25F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F23DE61FCD608500B6E25F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E055F2A1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
+		5E055F2D1FD2D759004BF1E4 /* CartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		5E055F2F1FD2D7D4004BF1E4 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		5EC8B9731FD3052700E2B497 /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
+		5EC8B9751FD31A0100E2B497 /* CartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartDataProvider.swift; sourceTree = "<group>"; };
+		5EC8B9771FD32B8800E2B497 /* GoodsTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableCellModel.swift; sourceTree = "<group>"; };
+		5EC8B9791FD32C3900E2B497 /* GoodsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableViewController.swift; sourceTree = "<group>"; };
+		5EC8B97B1FD32C9E00E2B497 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDataProvider.swift; sourceTree = "<group>"; };
+		5EC8B9801FD33BA100E2B497 /* CartOrderDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartOrderDataProvider.swift; sourceTree = "<group>"; };
 		E93363EF1FCD69E600FBFCB6 /* CategoryTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableCellModel.swift; sourceTree = "<group>"; };
 		E93363F01FCD69E600FBFCB6 /* CategoryTableDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableDataProvider.swift; sourceTree = "<group>"; };
 		E93363F51FCEC9A700FBFCB6 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		E93363F81FCED76900FBFCB6 /* GoodsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableViewController.swift; sourceTree = "<group>"; };
 		E93363FA1FCED79300FBFCB6 /* GoodsTableDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableDataProvider.swift; sourceTree = "<group>"; };
-		E93363FC1FCED7A900FBFCB6 /* GoodsTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableCellModel.swift; sourceTree = "<group>"; };
 		E93363FE1FCED80F00FBFCB6 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		E93364011FD00A9400FBFCB6 /* StoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
 		E93364031FD00AAE00FBFCB6 /* StoresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresModel.swift; sourceTree = "<group>"; };
 		E93364051FD00B5900FBFCB6 /* StoresMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresMapViewController.swift; sourceTree = "<group>"; };
 		E93364071FD00BA800FBFCB6 /* StoresDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresDataProvider.swift; sourceTree = "<group>"; };
 		E933640A1FD011DE00FBFCB6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		E933640E1FD03EC300FBFCB6 /* EvatorApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvatorApi.swift; sourceTree = "<group>"; };
+		E933640E1FD03EC300FBFCB6 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E9F23DC61FCD56D900B6E25F /* EvatorHackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvatorHackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F23DC91FCD56D900B6E25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9F23DCB1FCD56D900B6E25F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9F23DCB1FCD56D900B6E25F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E9F23DCE1FCD56D900B6E25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9F23DD01FCD56D900B6E25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F23DD31FCD56D900B6E25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9F23DD51FCD56D900B6E25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F23DDD1FCD5E5000B6E25F /* Order */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Order; sourceTree = "<group>"; };
 		E9F23DE61FCD608500B6E25F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +79,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E055F2C1FD2D749004BF1E4 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8B97B1FD32C9E00E2B497 /* CartTableViewCell.swift */,
+				5E055F2D1FD2D759004BF1E4 /* CartModel.swift */,
+				5E055F2F1FD2D7D4004BF1E4 /* OrderModel.swift */,
+				5EC8B9731FD3052700E2B497 /* CartTableViewController.swift */,
+				5EC8B9751FD31A0100E2B497 /* CartDataProvider.swift */,
+				5EC8B9801FD33BA100E2B497 /* CartOrderDataProvider.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		5EC8B97D1FD33B3500E2B497 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		E93363EE1FCD69E600FBFCB6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +113,10 @@
 		E93363F71FCED75900FBFCB6 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
-				E93363F81FCED76900FBFCB6 /* GoodsTableViewController.swift */,
+				5EC8B9791FD32C3900E2B497 /* GoodsTableViewController.swift */,
+				5EC8B9771FD32B8800E2B497 /* GoodsTableCellModel.swift */,
 				E93363FA1FCED79300FBFCB6 /* GoodsTableDataProvider.swift */,
-				E93363FC1FCED7A900FBFCB6 /* GoodsTableCellModel.swift */,
+				5E055F2A1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift */,
 			);
 			path = Goods;
 			sourceTree = "<group>";
@@ -100,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E933640A1FD011DE00FBFCB6 /* LocationManager.swift */,
-				E933640E1FD03EC300FBFCB6 /* EvatorApi.swift */,
+				E933640E1FD03EC300FBFCB6 /* ApiClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -125,13 +161,14 @@
 			isa = PBXGroup;
 			children = (
 				E9F23DE31FCD5F1F00B6E25F /* Resources */,
+				5EC8B97D1FD33B3500E2B497 /* Order */,
+				5E055F2C1FD2D749004BF1E4 /* Cart */,
 				E93363EE1FCD69E600FBFCB6 /* Category */,
 				E93363F71FCED75900FBFCB6 /* Goods */,
 				E93364001FD0098B00FBFCB6 /* Stores */,
 				E93364091FD011B300FBFCB6 /* Services */,
-				E9F23DDD1FCD5E5000B6E25F /* Order */,
 				E9F23DC91FCD56D900B6E25F /* AppDelegate.swift */,
-				E9F23DCB1FCD56D900B6E25F /* ViewController.swift */,
+				E9F23DCB1FCD56D900B6E25F /* TestViewController.swift */,
 				E9F23DE61FCD608500B6E25F /* Constants.swift */,
 				E93363FE1FCED80F00FBFCB6 /* Protocols.swift */,
 			);
@@ -181,7 +218,7 @@
 				TargetAttributes = {
 					E9F23DC51FCD56D900B6E25F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MFQX9R2M2F;
+						DevelopmentTeam = 8UHTUF3KRA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -211,7 +248,6 @@
 			files = (
 				E9F23DD41FCD56D900B6E25F /* LaunchScreen.storyboard in Resources */,
 				E9F23DD11FCD56D900B6E25F /* Assets.xcassets in Resources */,
-				E9F23DE11FCD5E5000B6E25F /* Order in Resources */,
 				E9F23DCF1FCD56D900B6E25F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,21 +259,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93363FD1FCED7A900FBFCB6 /* GoodsTableCellModel.swift in Sources */,
 				E93364021FD00A9400FBFCB6 /* StoresTableViewController.swift in Sources */,
+				5EC8B9811FD33BA100E2B497 /* CartOrderDataProvider.swift in Sources */,
+				5EC8B97A1FD32C3900E2B497 /* GoodsTableViewController.swift in Sources */,
 				E933640B1FD011DE00FBFCB6 /* LocationManager.swift in Sources */,
 				E93363FB1FCED79300FBFCB6 /* GoodsTableDataProvider.swift in Sources */,
 				E93363F61FCEC9A700FBFCB6 /* CategoryTableViewController.swift in Sources */,
-				E933640F1FD03EC300FBFCB6 /* EvatorApi.swift in Sources */,
+				5EC8B97C1FD32C9E00E2B497 /* CartTableViewCell.swift in Sources */,
+				5EC8B97F1FD33B4A00E2B497 /* OrderDataProvider.swift in Sources */,
+				E933640F1FD03EC300FBFCB6 /* ApiClient.swift in Sources */,
 				E93364081FD00BA800FBFCB6 /* StoresDataProvider.swift in Sources */,
-				E9F23DCC1FCD56D900B6E25F /* ViewController.swift in Sources */,
-				E93363F91FCED76900FBFCB6 /* GoodsTableViewController.swift in Sources */,
+				E9F23DCC1FCD56D900B6E25F /* TestViewController.swift in Sources */,
+				5E055F2E1FD2D759004BF1E4 /* CartModel.swift in Sources */,
 				E93363FF1FCED80F00FBFCB6 /* Protocols.swift in Sources */,
 				E93364061FD00B5900FBFCB6 /* StoresMapViewController.swift in Sources */,
 				E93363F21FCD69E600FBFCB6 /* CategoryTableCellModel.swift in Sources */,
+				5EC8B9781FD32B8800E2B497 /* GoodsTableCellModel.swift in Sources */,
+				5EC8B9761FD31A0100E2B497 /* CartDataProvider.swift in Sources */,
+				5EC8B9741FD3052700E2B497 /* CartTableViewController.swift in Sources */,
 				E93363F31FCD69E600FBFCB6 /* CategoryTableDataProvider.swift in Sources */,
 				E93364041FD00AAE00FBFCB6 /* StoresModel.swift in Sources */,
+				5E055F2B1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift in Sources */,
 				E9F23DCA1FCD56D900B6E25F /* AppDelegate.swift in Sources */,
+				5E055F301FD2D7D4004BF1E4 /* OrderModel.swift in Sources */,
 				E9F23DE71FCD608500B6E25F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,12 +405,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MFQX9R2M2F;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8UHTUF3KRA;
 				INFOPLIST_FILE = EvatorHackaton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TM.EvatorHackaton;
+				PRODUCT_BUNDLE_IDENTIFIER = EvoHack.Diskavery.EvatorHackaton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -375,12 +422,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MFQX9R2M2F;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8UHTUF3KRA;
 				INFOPLIST_FILE = EvatorHackaton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TM.EvatorHackaton;
+				PRODUCT_BUNDLE_IDENTIFIER = EvoHack.Diskavery.EvatorHackaton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

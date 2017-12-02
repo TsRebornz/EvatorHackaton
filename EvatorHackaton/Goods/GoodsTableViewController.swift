@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodsTableViewController: UITableViewController {
+final class GoodsTableViewController: UITableViewController {
 
     private var dataProvider:DataProvider?
     var categoryId: Int?
@@ -16,7 +16,8 @@ class GoodsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: Constants.goodsCell)
-        self.dataProvider = GoodsTableDataProvider()        
+        self.dataProvider = GoodsTableDataProvider()
+        self.dataProvider?.getData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +34,10 @@ class GoodsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        if let _cellModels = self.dataProvider?.cellModels {
+            return _cellModels.count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

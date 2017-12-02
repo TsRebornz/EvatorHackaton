@@ -1,14 +1,12 @@
-//
 //  GoodsTableViewCell.swift
 //  EvatorHackaton
 //
 //  Created by username on 02/12/2017.
 //  Copyright © 2017 TM. All rights reserved.
-//
 
 import UIKit
 
-final class GoodsTableViewCell: UITableViewCell,DataForCell {
+final class CartTableViewCell: UITableViewCell,DataForCell {
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var goodName: UILabel!
     @IBOutlet weak var minusButton: UIButton!
@@ -18,8 +16,9 @@ final class GoodsTableViewCell: UITableViewCell,DataForCell {
     
     private var itemId: Int!
     private var itemCount: Int = 0
-    private var goodModel: GoodsTableCellModel!
+    private var cartModel: CartModel!
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    weak var delegate: GoodTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,11 +33,13 @@ final class GoodsTableViewCell: UITableViewCell,DataForCell {
     }
     
     func setCellModel(model:AnyObject) {
-        let model = model as! GoodsTableCellModel
-        self.goodModel = model
+        let model = model as! CartModel
+        self.cartModel = model
         self.itemId = model.id
-        self.itemImageView.image = UIImage(named: model.goodsImageUrl)
-        self.goodName.text = model.goodsName
+        self.itemCountLabel.text = "\(model.itemCount)"
+        self.itemCount = model.itemCount
+        self.itemImageView.image = UIImage(named: model.imageName)
+        self.goodName.text = model.itemName
         self.priceButton.text = "\(model.price)\(Constants.rubleChar)/шт."
     }
     
@@ -69,9 +70,8 @@ final class GoodsTableViewCell: UITableViewCell,DataForCell {
             } else {
                 updateCartModel(by: self.itemCount)
             }
-            
-            self.itemCountLabel.text = "\(self.itemCount)"
-            appDelegate.removeCart(byId: self.itemId)
+            self.delegate?.priceChanged()
+            self.itemCountLabel.text = "\(self.itemCount)"            
         }
     }
     
@@ -83,12 +83,13 @@ final class GoodsTableViewCell: UITableViewCell,DataForCell {
             updateCartModel(by: self.itemCount)
         }
         self.itemCountLabel.text = "\(self.itemCount)"
+        self.delegate?.priceChanged()
     }
     
     //MARK: Cart Data
     func createAndSaveCartModel() {
-        let model = self.goodModel
-        let cartModel = CartModel(id: itemId, imageName: (model?.goodsImageUrl)! , itemName: (model?.goodsName)!, price: (model?.price)!, itemCount: self.itemCount)
+        let model = self.cartModel
+        let cartModel = CartModel(id: itemId, imageName: (model?.imageName)! , itemName: (model?.itemName)!, price: (model?.price)!, itemCount: self.itemCount)
         appDelegate.addModelToCartModel(model: cartModel)
     }
     

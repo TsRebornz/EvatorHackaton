@@ -9,13 +9,15 @@
 import UIKit
 
 final class StoresDataProvider: NSObject, DataProvider {
-    var cellModels: [StoresModel] = []    
+    var storesModels: [StoresModel] = []
+    var cellModels: [AnyObject] { get { return self.storesModels as [AnyObject] } }
+    
     func getData() -> [AnyObject]? {
         var cellModel = StoresModel(storeName: "Пятерочка", address: "ул.Петрова,д3,к.2", workTime: "Пн-Вс 12-22", distance: "1,4 км")
-        self.cellModels.append(cellModel)
+        self.storesModels.append(cellModel)
         cellModel = StoresModel(storeName: "Перекресток", address: "ул.Ленина,д4,к.1", workTime: "Пн-Вс 10-21", distance: "5 км")
-        self.cellModels.append(cellModel)
+        self.storesModels.append(cellModel)
         
-        return cellModels as? [AnyObject]
+        return storesModels as? [AnyObject]
     }
 }

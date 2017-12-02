@@ -10,6 +10,11 @@ import Foundation
 
 protocol DataProvider {
     func getData() -> [AnyObject]?
+    var cellModels: [AnyObject] { get }
+}
+
+protocol GoodTableViewCellDelegate: class {
+    func priceChanged()
 }
 
 protocol DataForCell {

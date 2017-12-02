@@ -11,10 +11,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //Carts
     private var cartModels: [CartModel] = []
+    private var lastRemovedId: Int?
+    
+    //Orders
+    private var orders: [OrderModel] = []
     
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -43,8 +47,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    
+    //MARK: Working with carts
     func addModelToCartModel(model: CartModel) {
         self.cartModels.append(model)
+    }
+    
+    func getCarts() -> [CartModel] {
+        for (index,cartModel) in self.cartModels.enumerated() {
+            if cartModel.itemCount == 0 {
+                self.cartModels.remove(at: index)
+            }
+        }
+        
+        return self.cartModels
     }
     
     func updateCartModel(by id: Int, and itemCount: Int) {
@@ -61,11 +77,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func removeCart(byId id: Int) {
+        if self.lastRemovedId == id { return }
         for (index, model) in self.cartModels.enumerated() {
             if (model.id == id) {
                 self.cartModels.remove(at: index)
+                self.lastRemovedId = id
             }
         }
     }
+    //MARK:
+    
+    //MARK: Working with orders 
+    func addOrder(byModel model: OrderModel) {
+        self.orders.append(model)
+    }
+    
+    func getOrders() -> [OrderModel] {
+        return self.orders
+    }
+    
+    //MARK:
 }
 
