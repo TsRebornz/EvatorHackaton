@@ -10,33 +10,28 @@ import UIKit
 
 final class GoodsTableDataProvider: NSObject, DataProvider {
     var goodsModels: [GoodsTableCellModel] = []
-    var categoryId: Int?
+    var categoryId: Int = 1
     
     var cellModels: [AnyObject] { get { return self.goodsModels as [AnyObject] } }
     
     func getData() -> [AnyObject]? {
-        var cellModel = GoodsTableCellModel(id: 51, categoryId: 1, goodsImageUrl:"rose",goodsName:"Розы", price: 150)
+        var cellModel = GoodsTableCellModel(id: 51, categoryId: 1, goodsImageUrl:"0101_bananas",goodsName:"Бананы", price: 45)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 52, categoryId: 1, goodsImageUrl:"dahlias",goodsName:"Георгины", price: 120)
+        cellModel = GoodsTableCellModel(id: 52, categoryId: 1, goodsImageUrl:"0102_oranges",goodsName:"Апельсины", price: 68)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 53, categoryId: 1, goodsImageUrl:"tulips",goodsName:"Тюльпаны", price: 135)
+        cellModel = GoodsTableCellModel(id: 53, categoryId: 1, goodsImageUrl:"0103_apples",goodsName:"Яблоки", price: 53)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 54, categoryId: 2, goodsImageUrl:"dahlias",goodsName:"Помидоры", price: 90)
+        cellModel = GoodsTableCellModel(id: 54, categoryId: 1, goodsImageUrl:"0104_pears",goodsName:"Груши", price: 90)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 55, categoryId: 2, goodsImageUrl:"dahlias",goodsName:"Огурцы", price: 50)
+        cellModel = GoodsTableCellModel(id: 55, categoryId: 1, goodsImageUrl:"0105_kiwi",goodsName:"Киви", price: 114)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 56, categoryId: 2, goodsImageUrl:"dahlias",goodsName:"Морковь", price: 45)
+        cellModel = GoodsTableCellModel(id: 56, categoryId: 2, goodsImageUrl:"0201_smetana",goodsName:"Сметана", price: 42)
         self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 57, categoryId: 3, goodsImageUrl:"dahlias",goodsName:"Апельсины", price: 87)
-        self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 58, categoryId: 3, goodsImageUrl:"dahlias",goodsName:"Яблоки", price: 56)
-        self.goodsModels.append(cellModel)
-        cellModel = GoodsTableCellModel(id: 59, categoryId: 3, goodsImageUrl:"dahlias",goodsName:"Бананы", price: 68)
-        self.goodsModels.append(cellModel)
+        
         
         if ((categoryId) != nil) {
             let filteredModels = goodsModels.filter({ model in
-                model.categoryId == self.categoryId!
+                model.categoryId == self.categoryId
             }) as [AnyObject]
             self.goodsModels = filteredModels as! [GoodsTableCellModel]
             return self.goodsModels as [AnyObject]

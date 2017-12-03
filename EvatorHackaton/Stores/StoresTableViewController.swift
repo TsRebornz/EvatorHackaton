@@ -35,6 +35,7 @@ final class StoresTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.storeCell, for: indexPath)
+        cell.selectionStyle = .none
         if let model = self.dataProvider?.getData()?[indexPath.row] as? StoresModel {
             let distanceLabel = cell.viewWithTag(1) as! UILabel
             distanceLabel.text = model.distance

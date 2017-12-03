@@ -43,6 +43,7 @@ class CategoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.categoryCell, for: indexPath)
+        cell.selectionStyle = .none
         let model = self.dataProvider?.getData()?[indexPath.row] as? CategoryTableCellModel
         let imageView = cell.viewWithTag(1) as! UIImageView
         imageView.image = UIImage(named: (model?.categoryImageUrl)!)

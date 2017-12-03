@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.notSendedOder = model
     }
     
-    func getNotSendedOrder() -> OrderModel {
+    func getNotSendedOrder() -> OrderModel? {
         return self.notSendedOder
     }
     

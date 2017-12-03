@@ -23,20 +23,22 @@ final class OrderDataProvider: NSObject, DataProvider {
     
     func saveAndSendOrderToEvator() {
         let apiClient = ApiClient()
-        let orderToSend = self.appDelegate.getNotSendedOrder()
-        let parameters: NSDictionary = orderToSend.toDictionary()
+        if let orderToSend = self.appDelegate.getNotSendedOrder() {
+            let parameters: NSDictionary = orderToSend.toDictionary()
+            
+            apiClient.sendOrders(parameters: parameters, handler: {json in
+                if let order = OrderModel.createModel(fromJson: json) {
+                    self.orders.append(order)
+                    self.delegate?.dataUpdated(data: self.cellModels as AnyObject)
+                    //                DispatchQueue.main.async {
+                    //                    self.appDelegate.addOrder(byModel: order)
+                    //                    self.getDataFromMemmory()
+                    //                    
+                    //                }
+                }
+            })
+        }
         
-        apiClient.sendOrders(parameters: parameters, handler: {json in
-            if let order = OrderModel.createModel(fromJson: json) {
-                self.orders.append(order)
-                self.delegate?.dataUpdated(data: self.cellModels as AnyObject)
-//                DispatchQueue.main.async {
-//                    self.appDelegate.addOrder(byModel: order)
-//                    self.getDataFromMemmory()
-//                    
-//                }
-            }
-        })
     }
     
     func updateOrders() {
