@@ -71,7 +71,7 @@ final class CartTableViewCell: UITableViewCell,DataForCell {
                 updateCartModel(by: self.itemCount)
             }
             self.delegate?.priceChanged()
-            self.itemCountLabel.text = "\(self.itemCount)"            
+            self.itemCountLabel.text = "\(self.itemCount)"
         }
     }
     

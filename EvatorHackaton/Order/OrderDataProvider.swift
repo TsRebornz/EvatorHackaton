@@ -8,8 +8,16 @@
 
 import UIKit
 
-final class OrderDataProvider: NSObject {
+final class OrderDataProvider: NSObject, DataProvider {
     var orders: [OrderModel] = []
+    var cellModels: [AnyObject] { get { return orders as [AnyObject] } }
     
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @discardableResult
+    func getData() -> [AnyObject]? {
+        self.orders = appDelegate.getOrders()
+        return cellModels
+    }
     
 }

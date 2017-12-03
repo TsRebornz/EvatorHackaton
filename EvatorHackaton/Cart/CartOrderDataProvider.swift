@@ -28,7 +28,7 @@ final class CartOrderDataProvider: NSObject {
             arrayOfGoods.append(cartModel)
         }
         
-        let orderModel = OrderModel(id: id, itemCount: cartModels.count, price: overAllPrice, goods: cartModels)
+        let orderModel = OrderModel(statusId: nil, itemCount: cartModels.count, price: overAllPrice, goods: cartModels)
         self.currentOrderInCart = orderModel
     }
     

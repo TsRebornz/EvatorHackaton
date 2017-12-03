@@ -17,6 +17,11 @@
 		5EC8B97C1FD32C9E00E2B497 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B97B1FD32C9E00E2B497 /* CartTableViewCell.swift */; };
 		5EC8B97F1FD33B4A00E2B497 /* OrderDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */; };
 		5EC8B9811FD33BA100E2B497 /* CartOrderDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9801FD33BA100E2B497 /* CartOrderDataProvider.swift */; };
+		5EC8B9831FD3B95200E2B497 /* OrderModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9821FD3B95200E2B497 /* OrderModelTableViewCell.swift */; };
+		5EC8B9851FD3BA4A00E2B497 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9841FD3BA4A00E2B497 /* OrderTableViewController.swift */; };
+		5EC8B9881FD3D92D00E2B497 /* UIColor + hexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9871FD3D92D00E2B497 /* UIColor + hexInit.swift */; };
+		5EC8B98A1FD3DF6A00E2B497 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B9891FD3DF6A00E2B497 /* TabBarController.swift */; };
+		5EC8B98C1FD3E95B00E2B497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B98B1FD3E95B00E2B497 /* Utilities.swift */; };
 		E93363F21FCD69E600FBFCB6 /* CategoryTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363EF1FCD69E600FBFCB6 /* CategoryTableCellModel.swift */; };
 		E93363F31FCD69E600FBFCB6 /* CategoryTableDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363F01FCD69E600FBFCB6 /* CategoryTableDataProvider.swift */; };
 		E93363F61FCEC9A700FBFCB6 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93363F51FCEC9A700FBFCB6 /* CategoryTableViewController.swift */; };
@@ -47,6 +52,11 @@
 		5EC8B97B1FD32C9E00E2B497 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDataProvider.swift; sourceTree = "<group>"; };
 		5EC8B9801FD33BA100E2B497 /* CartOrderDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartOrderDataProvider.swift; sourceTree = "<group>"; };
+		5EC8B9821FD3B95200E2B497 /* OrderModelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModelTableViewCell.swift; sourceTree = "<group>"; };
+		5EC8B9841FD3BA4A00E2B497 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		5EC8B9871FD3D92D00E2B497 /* UIColor + hexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + hexInit.swift"; sourceTree = "<group>"; };
+		5EC8B9891FD3DF6A00E2B497 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5EC8B98B1FD3E95B00E2B497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E93363EF1FCD69E600FBFCB6 /* CategoryTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableCellModel.swift; sourceTree = "<group>"; };
 		E93363F01FCD69E600FBFCB6 /* CategoryTableDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableDataProvider.swift; sourceTree = "<group>"; };
 		E93363F51FCEC9A700FBFCB6 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +106,18 @@
 			isa = PBXGroup;
 			children = (
 				5EC8B97E1FD33B4900E2B497 /* OrderDataProvider.swift */,
+				5EC8B9821FD3B95200E2B497 /* OrderModelTableViewCell.swift */,
+				5EC8B9841FD3BA4A00E2B497 /* OrderTableViewController.swift */,
 			);
 			path = Order;
+			sourceTree = "<group>";
+		};
+		5EC8B9861FD3D89800E2B497 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8B9871FD3D92D00E2B497 /* UIColor + hexInit.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E93363EE1FCD69E600FBFCB6 /* Category */ = {
@@ -160,6 +180,7 @@
 		E9F23DC81FCD56D900B6E25F /* EvatorHackaton */ = {
 			isa = PBXGroup;
 			children = (
+				5EC8B9861FD3D89800E2B497 /* Extensions */,
 				E9F23DE31FCD5F1F00B6E25F /* Resources */,
 				5EC8B97D1FD33B3500E2B497 /* Order */,
 				5E055F2C1FD2D749004BF1E4 /* Cart */,
@@ -171,6 +192,8 @@
 				E9F23DCB1FCD56D900B6E25F /* TestViewController.swift */,
 				E9F23DE61FCD608500B6E25F /* Constants.swift */,
 				E93363FE1FCED80F00FBFCB6 /* Protocols.swift */,
+				5EC8B9891FD3DF6A00E2B497 /* TabBarController.swift */,
+				5EC8B98B1FD3E95B00E2B497 /* Utilities.swift */,
 			);
 			path = EvatorHackaton;
 			sourceTree = "<group>";
@@ -262,6 +285,8 @@
 				E93364021FD00A9400FBFCB6 /* StoresTableViewController.swift in Sources */,
 				5EC8B9811FD33BA100E2B497 /* CartOrderDataProvider.swift in Sources */,
 				5EC8B97A1FD32C3900E2B497 /* GoodsTableViewController.swift in Sources */,
+				5EC8B9831FD3B95200E2B497 /* OrderModelTableViewCell.swift in Sources */,
+				5EC8B9881FD3D92D00E2B497 /* UIColor + hexInit.swift in Sources */,
 				E933640B1FD011DE00FBFCB6 /* LocationManager.swift in Sources */,
 				E93363FB1FCED79300FBFCB6 /* GoodsTableDataProvider.swift in Sources */,
 				E93363F61FCEC9A700FBFCB6 /* CategoryTableViewController.swift in Sources */,
@@ -270,9 +295,11 @@
 				E933640F1FD03EC300FBFCB6 /* ApiClient.swift in Sources */,
 				E93364081FD00BA800FBFCB6 /* StoresDataProvider.swift in Sources */,
 				E9F23DCC1FCD56D900B6E25F /* TestViewController.swift in Sources */,
+				5EC8B98C1FD3E95B00E2B497 /* Utilities.swift in Sources */,
 				5E055F2E1FD2D759004BF1E4 /* CartModel.swift in Sources */,
 				E93363FF1FCED80F00FBFCB6 /* Protocols.swift in Sources */,
 				E93364061FD00B5900FBFCB6 /* StoresMapViewController.swift in Sources */,
+				5EC8B9851FD3BA4A00E2B497 /* OrderTableViewController.swift in Sources */,
 				E93363F21FCD69E600FBFCB6 /* CategoryTableCellModel.swift in Sources */,
 				5EC8B9781FD32B8800E2B497 /* GoodsTableCellModel.swift in Sources */,
 				5EC8B9761FD31A0100E2B497 /* CartDataProvider.swift in Sources */,
@@ -281,6 +308,7 @@
 				E93364041FD00AAE00FBFCB6 /* StoresModel.swift in Sources */,
 				5E055F2B1FD2D2C7004BF1E4 /* GoodsTableViewCell.swift in Sources */,
 				E9F23DCA1FCD56D900B6E25F /* AppDelegate.swift in Sources */,
+				5EC8B98A1FD3DF6A00E2B497 /* TabBarController.swift in Sources */,
 				5E055F301FD2D7D4004BF1E4 /* OrderModel.swift in Sources */,
 				E9F23DE71FCD608500B6E25F /* Constants.swift in Sources */,
 			);

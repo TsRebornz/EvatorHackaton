@@ -367,45 +367,121 @@
             <point key="canvasLocation" x="-1384.8" y="120.98950524737631"/>
         </scene>
         <!--Заказы-->
-        <scene sceneID="sMc-vY-KbA">
+        <scene sceneID="5er-cF-2sN">
             <objects>
-                <tableViewController id="eZC-PK-sIv" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ba8-LS-Dfg">
+                <viewController id="whT-z7-cXK" customClass="OrderTableViewController" customModule="EvatorHackaton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nsM-ib-9EA"/>
+                        <viewControllerLayoutGuide type="bottom" id="55L-rV-v8K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hrp-vo-2A1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaS-Gy-y0r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="86" id="4AK-0H-RAB" customClass="OrderModelTableViewCell" customModule="EvatorHackaton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4AK-0H-RAB" id="JC3-Kr-rj8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sw4-zh-aDL">
+                                                    <rect key="frame" x="18" y="18" width="339" height="49.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-Le-4Sk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="25"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Заказ #59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-yZ-nMI">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="282.5" height="25"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-Yk-qCp">
+                                                                    <rect key="frame" x="292.5" y="0.0" width="46.5" height="25"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Q3U-NA-6Yp">
+                                                            <rect key="frame" x="0.0" y="25" width="339" height="24.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1445р" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-k2-5Us">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="49" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 позиции" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vi-8v-Rcw">
+                                                                    <rect key="frame" x="62" y="0.0" width="82.5" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Создан" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E35-8c-IWn">
+                                                                    <rect key="frame" x="157.5" y="0.0" width="181.5" height="24.5"/>
+                                                                    <color key="backgroundColor" red="0.79607843140000001" green="0.80392156859999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sw4-zh-aDL" firstAttribute="top" secondItem="JC3-Kr-rj8" secondAttribute="topMargin" constant="10" id="4uu-w4-1qJ"/>
+                                                <constraint firstItem="sw4-zh-aDL" firstAttribute="leading" secondItem="JC3-Kr-rj8" secondAttribute="leadingMargin" constant="10" id="6LS-xW-gPp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sw4-zh-aDL" secondAttribute="bottom" constant="10" id="V9l-Dv-Qyo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sw4-zh-aDL" secondAttribute="trailing" constant="10" id="yK0-Mw-51S"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="allPrice" destination="dTe-k2-5Us" id="SOT-bp-Uo1"/>
+                                            <outlet property="itemsCount" destination="7Vi-8v-Rcw" id="Rgc-6N-zGp"/>
+                                            <outlet property="orderNum" destination="KOa-yZ-nMI" id="RuV-dT-I07"/>
+                                            <outlet property="orderTime" destination="TGC-Yk-qCp" id="wNe-nw-2uF"/>
+                                            <outlet property="statusLabel" destination="E35-8c-IWn" id="5ot-2e-OPa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vlT-JT-xYS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vlT-JT-xYS" id="cwo-HS-alq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eZC-PK-sIv" id="hIP-pH-1Po"/>
-                            <outlet property="delegate" destination="eZC-PK-sIv" id="W7r-p0-oEB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Заказы" id="i1p-bU-ofj"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhh-CR-rj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yaS-Gy-y0r" secondAttribute="trailing" id="OY0-60-885"/>
+                            <constraint firstItem="55L-rV-v8K" firstAttribute="top" secondItem="yaS-Gy-y0r" secondAttribute="bottom" id="OiR-AY-5DE"/>
+                            <constraint firstItem="yaS-Gy-y0r" firstAttribute="leading" secondItem="Hrp-vo-2A1" secondAttribute="leading" id="UOu-3I-ncu"/>
+                            <constraint firstItem="yaS-Gy-y0r" firstAttribute="top" secondItem="Hrp-vo-2A1" secondAttribute="top" id="XwS-AN-V7v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Заказы" id="Fj6-Jj-m0H"/>
+                    <connections>
+                        <outlet property="tableView" destination="yaS-Gy-y0r" id="Lhs-6O-Rpy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL4-QR-vnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1385" y="856"/>
+            <point key="canvasLocation" x="-1386.4000000000001" y="855.9220389805098"/>
         </scene>
-        <!--Item-->
+        <!--Заказы-->
         <scene sceneID="o52-Rs-C1v">
             <objects>
                 <navigationController id="7Cj-9s-kK8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="IRP-DE-IDI"/>
+                    <tabBarItem key="tabBarItem" title="Заказы" image="list" id="IRP-DE-IDI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcY-dz-rSi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eZC-PK-sIv" kind="relationship" relationship="rootViewController" id="MPs-eR-uYO"/>
+                        <segue destination="whT-z7-cXK" kind="relationship" relationship="rootViewController" id="MQc-oE-gl0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEW-A9-uut" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -415,7 +491,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="cPL-wr-whz">
             <objects>
-                <tabBarController id="TTd-vm-RJb" sceneMemberID="viewController">
+                <tabBarController id="TTd-vm-RJb" customClass="TabBarController" customModule="EvatorHackaton" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YEs-qr-Kae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -575,6 +651,7 @@
     <resources>
         <image name="credit-cards-payment" width="16" height="16"/>
         <image name="flowers" width="1000" height="668"/>
+        <image name="list" width="16" height="16"/>
         <image name="rose" width="1000" height="625"/>
         <image name="shopping-cart" width="16" height="16"/>
     </resources>

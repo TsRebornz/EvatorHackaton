@@ -80,6 +80,9 @@ final class CartTableViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func orderButtonTapped(_ sender: Any) {
         self.cartOrderDataProvider?.saveAndSendOrderToEvator()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let orderTabIndex = Constants.orderTabIndex
+        appDelegate.setCurrentTab(toIndex: orderTabIndex)
     }
     
     //MARK:

@@ -9,10 +9,11 @@
 import Foundation
 
 struct OrderModel {
-    let id: Int
+    var statusId: Int?
     let itemCount: Int
     let price: Int
     let goods: [CartModel]
+    let statusNum: Int = 1
     
     func toDictionary() -> NSDictionary {
         var dicitionary = [

@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var cartModels: [CartModel] = []
     private var lastRemovedId: Int?
     
+    private var _ehTabBarController: TabBarController?
+    public var ehTabBarController: TabBarController {
+        get { return _ehTabBarController! }
+        set(value) {
+            _ehTabBarController = value
+        }
+    }
+    
     //Orders
     private var orders: [OrderModel] = []
     
@@ -94,6 +102,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getOrders() -> [OrderModel] {
         return self.orders
+    }
+    
+    //MARK:
+    
+    //MARK: TabBar interface
+    func setCurrentTab(toIndex index:Int) {
+        self._ehTabBarController?.selectedIndex = index
     }
     
     //MARK:

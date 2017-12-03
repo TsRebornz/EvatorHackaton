@@ -13,8 +13,11 @@ struct Constants {
     static let goodsCell                 = "goodsCell"
     static let cartCell                  = "cartCell"
     static let storeCell                 = "storeCell"
+    static let orderCell                 = "orderCell"
     static let defaultColor              = "00FFCB"
     static let makeOrderButtonText       = "Оформить заказ на"
     static let rubleChar                 = "\u{20BD}"
     static let uuid                      = "42c151a8-b22b-4cd5-b103-21bdb882e489"
+    static let orderTabIndex             = 2
+    
 }
