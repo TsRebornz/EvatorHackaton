@@ -13,7 +13,7 @@ struct OrderModel {
     let itemCount: Int
     let price: Int
     let goods: [CartModel]
-    let statusNum: Int = 1
+    let statusNum: Int?
     
     func toDictionary() -> NSDictionary {
         var dicitionary = [
@@ -29,5 +29,22 @@ struct OrderModel {
         }
         dicitionary["items"] = cartDictinaryArr
         return dicitionary as NSDictionary
+    }
+    
+    static func createModel(fromJson json: Any) -> OrderModel? {
+        if let dictionary = json as? [String: Any] {
+            guard let id = dictionary["id"] as? Int,
+                let price = dictionary["price"] as? Int,                
+                let status = dictionary["status"] as? Int,
+                let items = dictionary["items"] as? [[String: Any]],
+                let itemsCount = items.count as? Int
+            else
+            {
+                return nil
+            }
+            let orderModel = OrderModel(statusId: id, itemCount: itemsCount, price: price, goods: [], statusNum: status)
+            return orderModel
+        }
+        return nil
     }
 }

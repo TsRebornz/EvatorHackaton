@@ -1,24 +1,33 @@
-//
 //  OrderViewController.swift
 //  EvatorHackaton
-//
 //  Created by username on 03/12/2017.
 //  Copyright © 2017 TM. All rights reserved.
-//
 
 import UIKit
 
+extension OrderTableViewController: DataUpdated {
+    func dataUpdated(data: AnyObject) {
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+}
 
 final class OrderTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
+        
     private var dataProvider:DataProvider?
+    var refreshControl: UIRefreshControl! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareRefreshControl()
         self.dataProvider = OrderDataProvider()
+        (self.dataProvider as? OrderDataProvider)?.delegate = self
+        
+        //Data
+        self.refreshControl.beginRefreshing()
+        
         self.dataProvider?.getData()
         
         self.tableView.delegate = self
@@ -47,10 +56,32 @@ final class OrderTableViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.orderCell, for: indexPath) as? OrderModelTableViewCell
-        if let model = self.dataProvider?.getData()?[indexPath.row] as? OrderModel {
-            cell?.setCellModel(model:model as AnyObject)
+        if let model = self.dataProvider?.cellModels[indexPath.row] as? OrderModel {
+            cell?.setCellModel(model: model as AnyObject)
         }
         return cell!
+    }
+    
+    //MARK:
+    
+    //MARK: Refresh Control
+    private func prepareRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        //refreshControl.tintColor = AppearenceColors.defaultText
+        self.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl = refreshControl
+        } else {
+            self.tableView.backgroundView = refreshControl
+        }
+        
+    }
+    
+    func refresh(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
+        //(self.dataProvider as! OrderDataProvider).updateOrders()
     }
     
     //MARK:

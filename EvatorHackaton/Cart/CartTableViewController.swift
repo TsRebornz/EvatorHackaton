@@ -15,7 +15,7 @@ extension CartTableViewController: GoodTableViewCellDelegate {
 }
 
 final class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+            
     @IBOutlet weak var tableView: UITableView!
     private var dataProvider:DataProvider?
     fileprivate var cartOrderDataProvider: CartOrderDataProvider!
@@ -79,7 +79,7 @@ final class CartTableViewController: UIViewController, UITableViewDelegate, UITa
     //MARK: Actions
     
     @IBAction func orderButtonTapped(_ sender: Any) {
-        self.cartOrderDataProvider?.saveAndSendOrderToEvator()
+        self.cartOrderDataProvider?.saveToNotSendedOrder()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let orderTabIndex = Constants.orderTabIndex
         appDelegate.setCurrentTab(toIndex: orderTabIndex)

@@ -28,17 +28,12 @@ final class CartOrderDataProvider: NSObject {
             arrayOfGoods.append(cartModel)
         }
         
-        let orderModel = OrderModel(statusId: nil, itemCount: cartModels.count, price: overAllPrice, goods: cartModels)
+        let orderModel = OrderModel(statusId: nil, itemCount: cartModels.count, price: overAllPrice, goods: cartModels, statusNum: nil)
         self.currentOrderInCart = orderModel
     }
     
-    func saveAndSendOrderToEvator() {
-        let apiClient = ApiClient()
-        let parameters: NSDictionary = currentOrderInCart.toDictionary()
-        
-        
-        apiClient.reaquestExamaple(parameters: parameters)
-        self.appDelegate.addOrder(byModel: currentOrderInCart)
+    func saveToNotSendedOrder() {
+        self.appDelegate.addNotSendedOrder(model: currentOrderInCart)
     }
     
 }

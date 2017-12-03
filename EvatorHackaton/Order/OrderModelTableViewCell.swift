@@ -9,7 +9,7 @@
 import UIKit
 
 enum StatusEnum {
-    case created, processed, ready
+    case created, processed, ready, paid
     
     var statusDescription: String {
         switch self {
@@ -19,6 +19,8 @@ enum StatusEnum {
             return "Обработан"
         case .ready:
             return "Готов"
+        case .paid:
+            return "Оплачен"
         }
     }
     
@@ -30,6 +32,8 @@ enum StatusEnum {
             return UIColor(hex: "FF7800")
         case .ready:
             return UIColor(hex: "4CAF50")
+        case .paid:
+            return UIColor(hex: "00AF00")
         }
     }
     
@@ -41,6 +45,8 @@ enum StatusEnum {
             return StatusEnum.processed
         case 3:
             return StatusEnum.ready
+        case 4:
+            return StatusEnum.paid
         default:
             return StatusEnum.created
         }
@@ -70,8 +76,10 @@ final class OrderModelTableViewCell: UITableViewCell {
     func setCellModel(model:AnyObject) {
         let model = model as! OrderModel
         //FIXME: Fix hardCode
-        self.orderNum.text = "Заказ #56"
-        
+        if let t_statusId = model.statusId {
+            self.orderNum.text = "Заказ #\(t_statusId)"
+        }
+                
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
@@ -82,9 +90,11 @@ final class OrderModelTableViewCell: UITableViewCell {
         let word = Utilities.generateWord(with: model.itemCount, and: arrOfWords)
         self.itemsCount.text = "\(model.itemCount) \(word)"
         
-        let statusEnum = StatusEnum.convertToEnum(byNum: model.statusNum)
-        self.statusLabel.backgroundColor = statusEnum.statusColor
-        self.statusLabel.text = statusEnum.statusDescription
+        if let t_statusNum = model.statusNum {
+            let statusEnum = StatusEnum.convertToEnum(byNum: t_statusNum)
+            self.statusLabel.backgroundColor = statusEnum.statusColor
+            self.statusLabel.text = statusEnum.statusDescription
+        }        
     }
 
 }

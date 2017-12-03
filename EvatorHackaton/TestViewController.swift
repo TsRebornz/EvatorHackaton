@@ -34,8 +34,7 @@ final class TestViewController: UIViewController {
     //MARK: Action
     
     @IBAction func buttonTapped(_ sender: Any) {
-        let apiClient = ApiClient()
-        apiClient.reaquestExamaple(parameters: self.json)    }
+    }
     
     //MARK:
 

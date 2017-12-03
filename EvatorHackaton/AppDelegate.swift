@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     //Orders
+    private var notSendedOder: OrderModel!
     private var orders: [OrderModel] = []
     
     var window: UIWindow?
@@ -95,7 +96,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     //MARK:
     
-    //MARK: Working with orders 
+    //MARK: Working with orders
+    func addNotSendedOrder(model: OrderModel) {
+        self.notSendedOder = model
+    }
+    
+    func getNotSendedOrder() -> OrderModel {
+        return self.notSendedOder
+    }
+    
     func addOrder(byModel model: OrderModel) {
         self.orders.append(model)
     }

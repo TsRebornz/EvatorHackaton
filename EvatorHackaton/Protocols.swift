@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol DataUpdated: class {
+    func dataUpdated(data: AnyObject)
+}
+
 protocol DataProvider {
     func getData() -> [AnyObject]?
     var cellModels: [AnyObject] { get }
