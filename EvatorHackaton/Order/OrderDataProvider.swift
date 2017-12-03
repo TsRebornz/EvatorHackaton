@@ -30,11 +30,6 @@ final class OrderDataProvider: NSObject, DataProvider {
                 if let order = OrderModel.createModel(fromJson: json) {
                     self.orders.append(order)
                     self.delegate?.dataUpdated(data: self.cellModels as AnyObject)
-                    //                DispatchQueue.main.async {
-                    //                    self.appDelegate.addOrder(byModel: order)
-                    //                    self.getDataFromMemmory()
-                    //                    
-                    //                }
                 }
             })
         }
@@ -43,18 +38,18 @@ final class OrderDataProvider: NSObject, DataProvider {
     
     func updateOrders() {
         let apiClient = ApiClient()
-        apiClient.getOrders(handler: { json in
-            let orders = json as? [String: Any]
-            for jsonOrder in orders! {
-                if let order = OrderModel.createModel(fromJson: jsonOrder) {
-                    self.orders.append(order)
-                }
+        if let model = self.orders.first {
+            guard let t_id = model.statusId else {
+                return
             }
-            self.delegate?.dataUpdated(data: self.cellModels as AnyObject)
-//            DispatchQueue.main.async {
-//                self.getDataFromMemmory()
-//                
-//            }
-        })
+            apiClient.getOrders(orderId: t_id, handler: { json in
+                if let order = OrderModel.createModel(fromJson: json) {
+                    self.orders.removeAll()
+                    self.orders.append(order)
+                    self.delegate?.dataUpdated(data: self.cellModels as AnyObject)
+                }
+            })
+        }
+        
     }
 }

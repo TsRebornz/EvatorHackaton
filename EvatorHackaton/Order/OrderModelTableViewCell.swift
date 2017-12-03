@@ -16,7 +16,7 @@ enum StatusEnum {
         case .created:
             return "Создан"
         case .processed:
-            return "Обработан"
+            return "В работе"
         case .ready:
             return "Готов"
         case .paid:
@@ -64,6 +64,8 @@ final class OrderModelTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        statusLabel.layer.cornerRadius = 12
+        statusLabel.layer.masksToBounds = true
         
         // Initialization code
     }

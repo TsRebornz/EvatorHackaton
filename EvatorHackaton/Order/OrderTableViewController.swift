@@ -82,7 +82,7 @@ final class OrderTableViewController: UIViewController, UITableViewDataSource, U
     
     func refresh(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
-        //(self.dataProvider as! OrderDataProvider).updateOrders()
+        (self.dataProvider as! OrderDataProvider).updateOrders()
     }
     
     //MARK:

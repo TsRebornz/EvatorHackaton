@@ -16,7 +16,7 @@ final class CategoryTableDataProvider: NSObject, DataProvider {
     func getData() -> [AnyObject]? {
         var cellModel = CategoryTableCellModel(id: 1, categoryImageUrl:"0100",categoryName:"Овощи и фрукты")
         self.categoryModels.append(cellModel)
-        cellModel = CategoryTableCellModel(id: 2, categoryImageUrl:"0200",categoryName:"Молочные продукты")
+        cellModel = CategoryTableCellModel(id: 2, categoryImageUrl:"0200",categoryName:"Молоко, сыр")
         self.categoryModels.append(cellModel)
         cellModel = CategoryTableCellModel(id: 3, categoryImageUrl:"0300",categoryName:"Бакалея, крупы")
         self.categoryModels.append(cellModel)

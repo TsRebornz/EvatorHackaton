@@ -44,17 +44,13 @@ final class ApiClient: NSObject {
         }.resume()
     }
     
-    func getOrders(handler: @escaping (Any) -> Void){
-        let Url = String(format: backEndOrderPostRequest)
+    func getOrders(orderId: Int, handler: @escaping (Any) -> Void){
+        let Url = String(format: "https://seagle.pythonanywhere.com/order/\(orderId).json")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "GET"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: [], options: []) else {
-            return
-        }
-        request.httpBody = httpBody
-        
+                
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
